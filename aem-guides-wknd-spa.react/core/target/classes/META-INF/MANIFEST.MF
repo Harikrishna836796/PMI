@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-Category: WKND SPA React
+Bundle-Description: Core bundle for WKND SPA React
+Bundle-ManifestVersion: 2
+Bundle-Name: WKND SPA React - Core
+Bundle-SymbolicName: aem-guides-wknd-spa.react.core
+Bundle-Version: 1.0.0.SNAPSHOT
+Import-Package: javax.annotation;version="0.0.0"
+
