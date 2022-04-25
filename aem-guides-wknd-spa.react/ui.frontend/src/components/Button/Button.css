@@ -1,0 +1,31 @@
+.btn {
+  display: inline-block;
+  padding: 0px 30px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 40px;
+  color: #33303c;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-slate-turquoise {
+  background-color: #33303c;
+  color: #fff;
+}
+.btn-slate-turquoise:hover {
+  background-color: #5eced0;
+  color: #33303c;
+}
+
+.btn-slate-white {
+  background-color: #33303c;
+  color: #fff;
+}
+.btn-slate-white:hover {
+  background-color: #fff;
+  color: #33303c;
+  outline: 1px #33303c solid;
+}
