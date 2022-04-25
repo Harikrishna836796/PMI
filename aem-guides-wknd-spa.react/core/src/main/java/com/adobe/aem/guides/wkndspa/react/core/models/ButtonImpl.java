@@ -49,23 +49,14 @@ public class ButtonImpl extends AbstractComponentImpl implements Button{
 	@Self
 	private SlingHttpServletRequest request;
 	
-	@ScriptVariable
-	private PageManager pageManager;
-	
 	@ValueMapValue
 	@Via("resource")
 	@Default(values="Select One")
 	private String styleVariation;
+
+	@ScriptVariable
+	private PageManager pageManager;
 	
-	@ValueMapValue
-	@Via("resource")
-	@Default(values="Select One")
-	private String linkVariation;
-
-	public String getLinkVariation() {
-		return linkVariation;
-	}
-
 	@Override
 	public String getText() {
 		return button.getText();
