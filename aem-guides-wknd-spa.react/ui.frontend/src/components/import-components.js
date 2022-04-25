@@ -37,7 +37,6 @@ import {
 
 import {
     BreadCrumbV2,BreadCrumbV2IsEmptyFn,
-    ButtonV1,ButtonV1IsEmptyFn,
     ImageV2,ImageV2IsEmptyFn,
     LanguageNavigationV1,
     NavigationV1,
@@ -49,6 +48,7 @@ import {
 
 //lazyload / code splitting example of an internal component
 const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
+const LazyButtonComponent = withAsyncImport(() => import(`./Button/Button`));
 
 //lazyload / code splitting examples of external components
 const TitleV2 = withAsyncImport(() => import(`@adobe/aem-core-components-react-base/dist/authoring/title/v2/TitleV2`));
@@ -59,7 +59,6 @@ MapTo('wknd-spa-react/components/download')(DownloadV1, {isEmpty: DownloadV1IsEm
 MapTo('wknd-spa-react/components/list')(ListV2, {isEmpty: ListV2IsEmptyFn});
 MapTo('wknd-spa-react/components/separator')(SeparatorV1, {isEmpty: SeparatorV1IsEmptyFn});
 
-MapTo('wknd-spa-react/components/button')(ButtonV1, {isEmpty: ButtonV1IsEmptyFn});
 MapTo('wknd-spa-react/components/teaser')(TeaserV1, {isEmpty: TeaserV1IsEmptyFn});
 MapTo('wknd-spa-react/components/image')(ImageV2, {isEmpty: ImageV2IsEmptyFn});
 MapTo('wknd-spa-react/components/title')(TitleV2, {isEmpty: TitleV2IsEmptyFn});
@@ -92,3 +91,4 @@ const TextEditConfig = {
 };
 
 MapTo('wknd-spa-react/components/text')(LazyTextComponent, TextEditConfig);
+MapTo('wknd-spa-react/components/button')(LazyButtonComponent);

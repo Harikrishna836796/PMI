@@ -86,65 +86,6 @@
                             </columns>
                         </items>
                     </buttonvar>
-                    <linkvar
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="Link Variants"
-                        sling:resourceType="granite/ui/components/coral/foundation/container"
-                        margin="{Boolean}true">
-                        <items jcr:primaryType="nt:unstructured">
-                            <columns
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
-                                margin="{Boolean}true">
-                                <items jcr:primaryType="nt:unstructured">
-                                    <column
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/container">
-                                        <items jcr:primaryType="nt:unstructured">
-                                            <variation
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                                fieldDescription="Link Variations"
-                                                fieldLabel="Link Variation"
-                                                name="./linkVariation"
-                                                type="editable">
-                                                <items jcr:primaryType="nt:unstructured">
-                                                    <select
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Select One"
-                                                        value="select one"/>
-                                                    <linkturquoise
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Link turquoise"
-                                                        value="link-turquoise"/>
-                                                    <linkslate
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Link slate"
-                                                        value="link-slate"/>
-                                                    <linksoftwhite
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Link soft white"
-                                                        value="link-soft-white"/>
-                                                    <linkslateturquoise
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Link slate / turquoise"
-                                                        value="link-slate-turquoise"/>
-                                                    <linkwhiteturquoise
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Link white / turquoise"
-                                                        value="link-white-turquoise"/>
-                                                    <linkslatewhite
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Link slate / white"
-                                                        value="link-slate-white"/>
-                                                </items>
-                                            </variation>
-                                        </items>
-                                    </column>
-                                </items>
-                            </columns>
-                        </items>
-                    </linkvar>
                 </items>
             </tabs>
         </items>
