@@ -65,26 +65,6 @@ public class ContainerImpl implements LayoutContainer   {
    @Via(type = ResourceSuperType.class)
    private ResponsiveGrid responsiveGrid;
    
-     /**
-     * The layout type.
-     */
-    private LayoutType layout;
-    
-    @ScriptVariable(injectionStrategy = InjectionStrategy.OPTIONAL)
-    @JsonIgnore
-    @Nullable
-    protected Style currentStyle;
-   /**
-    * The current resource.
-    */
-   @ScriptVariable
-   private Resource resource;
-
-   @Self
-   private SlingHttpServletRequest request;
-
-   @ScriptVariable
-   private PageManager pageManager;
 
    public String getGridClassNames() {
       return responsiveGrid.getGridClassNames();
