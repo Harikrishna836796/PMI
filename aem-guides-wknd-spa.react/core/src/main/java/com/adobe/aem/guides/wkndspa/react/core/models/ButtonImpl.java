@@ -51,9 +51,39 @@ public class ButtonImpl extends AbstractComponentImpl implements Button{
 	
 	@ValueMapValue
 	@Via("resource")
-	@Default(values="Select One")
+	@Default(values="btn-slate-turquoise")
 	private String styleVariation;
+	
+	@ValueMapValue
+	@Via("resource")
+	@Default(values="button")
+	private String variationType;
 
+	@ValueMapValue
+	@Via("resource")
+	@Default(values="link-turquoise")
+	private String linkVariation;
+	
+	@ValueMapValue
+	@Via("resource")
+	@Default(values="0")
+	private String marginBottom;
+	
+	@ValueMapValue
+	@Via("resource")
+	@Default(values="0")
+	private String marginTop;
+	
+	@ValueMapValue
+	@Via("resource")
+	@Default(values="0")
+	private String marginStart;
+	
+	@ValueMapValue
+	@Via("resource")
+	@Default(values="0")
+	private String marginEnd;
+	
 	@ScriptVariable
 	private PageManager pageManager;
 	
@@ -87,6 +117,31 @@ public class ButtonImpl extends AbstractComponentImpl implements Button{
 		return request.getResource().getResourceType();
 	}
 	
+	
+	public String getVariationType() {
+		return variationType;
+	}
+
+	public String getLinkVariation() {
+		return linkVariation;
+	}
+
+	public String getMarginBottom() {
+		return "mb-"+marginBottom;
+	}
+
+	public String getMarginTop() {
+		return "mt-"+marginTop;
+	}
+
+	public String getMarginStart() {
+		return "ms-"+marginStart;
+	}
+
+	public String getMarginEnd() {
+		return "me-"+marginEnd;
+	}
+
 	@Nullable
 	public String getStyleVariation() {
 		return styleVariation;

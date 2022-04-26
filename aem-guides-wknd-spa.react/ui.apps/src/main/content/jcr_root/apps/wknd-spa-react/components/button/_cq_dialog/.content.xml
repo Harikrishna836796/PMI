@@ -30,56 +30,190 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
-                                            <variation
+                                            <listFrom
+                                                granite:class="cq-dialog-dropdown-showhide"
                                                 jcr:primaryType="nt:unstructured"
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                                fieldDescription="Style Variations for Button"
-                                                fieldLabel="Style Variation"
-                                                name="./styleVariation"
-                                                type="editable">
+                                                fieldLabel="Select the Variation Type"
+                                                name="./variationType">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    cq-dialog-dropdown-showhide-target=".list-option-listfrom-showhide-target"/>
                                                 <items jcr:primaryType="nt:unstructured">
-                                                    <select
+                                                    <button
                                                         jcr:primaryType="nt:unstructured"
-                                                        text="Select One"
-                                                        value="select one"/>
-                                                    <primary
+                                                        text="Button Variations"
+                                                        value="button"/>
+                                                    <link
                                                         jcr:primaryType="nt:unstructured"
-                                                        text="Primary slate / &#xa;turquoise"
-                                                        value="btn-slate-turquoise"/>
-                                                    <primary1
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Primary slate /&#xa;white&#xa;"
-                                                        value="btn-slate-white"/>
-                                                    <primary2
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Primary white /&#xa;turquoise&#xa;"
-                                                        value="btn-white-turquoise"/>
-                                                    <secondary
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Secondary slate&#xa;/ turquoise"
-                                                        value="btn-outline-slate-turquoise"/>
-                                                    <secondary1
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Secondary slate&#xa;/ slate"
-                                                        value="btn-outline-slate-slate"/>
-                                                    <secondary2
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Secondary white&#xa;/ turquoise"
-                                                        value="btn-outline-white-turquoise"/>
-                                                    <tertiary
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Tertiary slate /&#xa;turquoise"
-                                                        value="btn-forward-slate-turquois"/>
-                                                    <tertiary1
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Tertiary slate /&#xa;white"
-                                                        value="btn-forward-slate-white"/>
-                                                    <tertiary2
-                                                        jcr:primaryType="nt:unstructured"
-                                                        text="Tertiary white /&#xa;turquoise&#xa;"
-                                                        value="btn-forward-white-turquoise link-soft-white"/>
+                                                        text="Link Variations"
+                                                        value="link"/>
                                                 </items>
-                                            </variation>
+                                            </listFrom>
+                                            <buttons
+                                                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Button Variations"/>
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <variations
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                fieldDescription="Style Variations for Button"
+                                                                fieldLabel="Button Variation"
+                                                                name="./styleVariation"
+                                                                type="editable">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <primary
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Primary slate / &#xa;turquoise"
+                                                                        value="btn-slate-turquoise"/>
+                                                                    <primary1
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Primary slate /&#xa;white&#xa;"
+                                                                        value="btn-slate-white"/>
+                                                                    <primary2
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Primary white /&#xa;turquoise&#xa;"
+                                                                        value="btn-white-turquoise"/>
+                                                                    <secondary
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Secondary slate&#xa;/ turquoise"
+                                                                        value="btn-outline-slate-turquoise"/>
+                                                                    <secondary1
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Secondary slate&#xa;/ slate"
+                                                                        value="btn-outline-slate-slate"/>
+                                                                    <secondary2
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Secondary white&#xa;/ turquoise"
+                                                                        value="btn-outline-white-turquoise"/>
+                                                                    <tertiary
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Tertiary slate /&#xa;turquoise"
+                                                                        value="btn-forward-slate-turquois"/>
+                                                                    <tertiary1
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Tertiary slate /&#xa;white"
+                                                                        value="btn-forward-slate-white"/>
+                                                                    <tertiary2
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Tertiary white /&#xa;turquoise&#xa;"
+                                                                        value="btn-forward-white-turquoise link-soft-white"/>
+                                                                </items>
+                                                            </variations>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="button"/>
+                                            </buttons>
+                                            <links
+                                                granite:class="hide list-option-listfrom-showhide-target foundation-layout-util-vmargin"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <granite:data
+                                                    jcr:primaryType="nt:unstructured"
+                                                    showhidetargetvalue="link"/>
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <heading
+                                                        granite:class="coral-Heading coral-Heading--4"
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                        level="{Long}4"
+                                                        text="Link Variations"/>
+                                                    <well
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/well">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <linkvariations
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                fieldDescription="Link Variations for Button"
+                                                                fieldLabel="Link Variation"
+                                                                name="./linkVariation"
+                                                                type="editable">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <primary
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Link turquoise"
+                                                                        value="link-turquoise"/>
+                                                                    <primary1
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Link slate"
+                                                                        value="link-slate"/>
+                                                                    <primary2
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Link soft white "
+                                                                        value="link-soft-white"/>
+                                                                    <secondary
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Link slate / &#xa;turquoise"
+                                                                        value="link-slate-turquoise"/>
+                                                                    <secondary1
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Link white / &#xa;turquoise"
+                                                                        value="link-white-turquoise"/>
+                                                                    <secondary2
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Link slate / white"
+                                                                        value="link-slate-white"/>
+                                                                </items>
+                                                            </linkvariations>
+                                                        </items>
+                                                    </well>
+                                                </items>
+                                            </links>
+                                            <margintop
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldDescription="Controls how deep the child items can be added to the list"
+                                                fieldLabel="Margin Top"
+                                                max="10"
+                                                min="0"
+                                                name="./marginTop"
+                                                step="1"
+                                                value="0"/>
+                                            <marginbottom
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldDescription="Controls how deep the child items can be added to the list"
+                                                fieldLabel="Margin Bottom"
+                                                max="10"
+                                                min="0"
+                                                name="./marginBottom"
+                                                step="1"
+                                                value="0"/>
+                                            <marginstart
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldDescription="Controls how deep the child items can be added to the list"
+                                                fieldLabel="Margin Start"
+                                                max="10"
+                                                min="0"
+                                                name="./marginStart"
+                                                step="1"
+                                                value="0"/>
+                                            <marginend
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                fieldDescription="Controls how deep the child items can be added to the list"
+                                                fieldLabel="Margin End"
+                                                max="10"
+                                                min="0"
+                                                name="./marginEnd"
+                                                step="1"
+                                                value="0"/>
                                         </items>
                                     </column>
                                 </items>
