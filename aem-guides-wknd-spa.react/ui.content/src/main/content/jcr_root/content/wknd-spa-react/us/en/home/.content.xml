@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="cq:Page">
+    jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2018-10-04T09:50:29.650+02:00"
+        cq:lastModified="{Date}2022-04-26T15:02:05.962+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd-spa-react/settings/wcm/templates/spa-page-template"
         jcr:primaryType="cq:PageContent"
@@ -14,13 +14,270 @@
             <responsivegrid
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="wcm/foundation/components/responsivegrid">
-                <text
+                <container
+                    cq:styleIds="[1650940841023]"
+                    jcr:created="{Date}2022-04-25T15:58:52.901+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-04-25T16:14:24.092+05:30"
+                    jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="wknd-spa-react/components/text"
-                    text="&lt;p>Hello World!&lt;/p>"
-                    textIsRich="true">
-                    <cq:responsive jcr:primaryType="nt:unstructured"/>
-                </text>
+                    sling:resourceType="wknd-spa-react/components/container"
+                    backgroundColor="rgb(65,255,255)"
+                    layout="responsiveGrid">
+                    <cq:responsive jcr:primaryType="nt:unstructured">
+                        <default
+                            jcr:primaryType="nt:unstructured"
+                            offset="0"
+                            width="12"/>
+                    </cq:responsive>
+                    <container
+                        jcr:created="{Date}2022-04-25T16:03:24.926+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-04-25T16:14:18.691+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wknd-spa-react/components/container"
+                        layout="responsiveGrid">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="6"/>
+                            <phone
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="12"/>
+                        </cq:responsive>
+                        <text
+                            jcr:created="{Date}2022-04-25T16:04:02.881+05:30"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2022-04-26T11:06:42.596+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wknd-spa-react/components/text"
+                            text="&lt;h3>&lt;b>Discover the&lt;br>&#xd;&#xa;IQOS 3 DUO&lt;/b>&lt;/h3>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>Two consecutive uses&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button
+                            jcr:created="{Date}2022-04-25T16:05:52.753+05:30"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2022-04-26T09:33:21.403+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="buy now"
+                            sling:resourceType="wknd-spa-react/components/button"
+                            link="/content/we-retail/us/en/men"
+                            linkVariation="link-turquoise"
+                            styleVariation="btn-slate-white"
+                            variationType="button">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="2"/>
+                                <tablet
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="6"/>
+                                <phone
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="6"/>
+                            </cq:responsive>
+                        </button>
+                        <button_1071916793
+                            jcr:created="{Date}2022-04-26T09:35:04.158+05:30"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2022-04-26T09:39:45.855+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="see more"
+                            sling:resourceType="wknd-spa-react/components/button"
+                            link="/content/wknd-spa-react/us/en/test-page"
+                            linkVariation="link-turquoise"
+                            marginBottom="0"
+                            marginEnd="0"
+                            marginStart="0"
+                            marginTop="0"
+                            styleVariation="btn-slate-turquoise"
+                            variationType="button">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                                <tablet
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="6"/>
+                                <phone
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="6"/>
+                            </cq:responsive>
+                        </button_1071916793>
+                    </container>
+                    <container_copy
+                        jcr:created="{Date}2022-04-25T16:03:24.926+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-04-25T16:14:29.872+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wknd-spa-react/components/container"
+                        layout="responsiveGrid">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="6"/>
+                            <phone
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="12"/>
+                        </cq:responsive>
+                        <image
+                            jcr:created="{Date}2022-04-25T16:06:15.465+05:30"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2022-04-26T08:52:24.720+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wknd-spa-react/components/image"
+                            displayPopupTitle="false"
+                            fileReference="/content/dam/wknd-spa-react/NBW_Homepage_ContentBlock_Benefits_TexturedBackground_Grid2_ProductNoHeets_Desktop_Standard@2x.jpg"
+                            isDecorative="true"
+                            titleValueFromDAM="false"/>
+                    </container_copy>
+                </container>
+                <container_263094449
+                    cq:styleIds="[1650940819384]"
+                    jcr:created="{Date}2022-04-26T09:54:38.565+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2022-04-26T09:54:38.565+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wknd-spa-react/components/container">
+                    <container
+                        jcr:created="{Date}2022-04-26T09:55:07.138+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-04-26T09:55:07.138+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wknd-spa-react/components/container">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="6"/>
+                            <phone
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="12"/>
+                        </cq:responsive>
+                        <image
+                            jcr:created="{Date}2022-04-26T09:55:32.790+05:30"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2022-04-26T09:56:06.810+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wknd-spa-react/components/image"
+                            alt="as"
+                            altValueFromDAM="false"
+                            displayPopupTitle="true"
+                            fileReference="/content/dam/wknd-spa-react/Promo_1_Background_Desktop.T1638438038042.V0_83_65_0_11.jpg"
+                            isDecorative="false"
+                            titleValueFromDAM="true">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <phone
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="12"/>
+                            </cq:responsive>
+                        </image>
+                    </container>
+                    <container_1562857610
+                        jcr:created="{Date}2022-04-26T09:55:21.538+05:30"
+                        jcr:createdBy="admin"
+                        jcr:lastModified="{Date}2022-04-26T09:55:21.538+05:30"
+                        jcr:lastModifiedBy="admin"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wknd-spa-react/components/container">
+                        <cq:responsive jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="6"/>
+                            <phone
+                                jcr:primaryType="nt:unstructured"
+                                offset="0"
+                                width="12"/>
+                        </cq:responsive>
+                        <text
+                            jcr:created="{Date}2022-04-26T09:56:15.584+05:30"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2022-04-26T11:06:25.294+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wknd-spa-react/components/text"
+                            text="&lt;h3>&lt;b>IQOS 3 DUO&lt;/b>&lt;/h3>&#xd;&#xa;&lt;p>Two Consecutive uses without IQOS&lt;/p>&#xd;&#xa;&lt;p>holder change in between&lt;/p>&#xd;&#xa;"
+                            textIsRich="true"/>
+                        <button
+                            jcr:created="{Date}2022-04-26T10:08:05.546+05:30"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2022-04-26T10:08:36.668+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Read more"
+                            sling:resourceType="wknd-spa-react/components/button"
+                            link="/content/we-retail/us/en/men"
+                            linkVariation="link-turquoise"
+                            marginBottom="0"
+                            marginEnd="0"
+                            marginStart="0"
+                            marginTop="0"
+                            styleVariation="btn-slate-turquoise"
+                            variationType="button">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                                <tablet
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                                <phone
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="6"/>
+                            </cq:responsive>
+                        </button>
+                        <button_9119920
+                            jcr:created="{Date}2022-04-26T10:10:28.716+05:30"
+                            jcr:createdBy="admin"
+                            jcr:lastModified="{Date}2022-04-26T10:10:37.413+05:30"
+                            jcr:lastModifiedBy="admin"
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Buy Now"
+                            sling:resourceType="wknd-spa-react/components/button"
+                            linkVariation="link-turquoise"
+                            marginBottom="0"
+                            marginEnd="0"
+                            marginStart="0"
+                            marginTop="0"
+                            styleVariation="btn-slate-white"
+                            variationType="button">
+                            <cq:responsive jcr:primaryType="nt:unstructured">
+                                <default
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="0"
+                                    width="3"/>
+                                <tablet
+                                    jcr:primaryType="nt:unstructured"
+                                    offset="NaN"
+                                    width="NaN"/>
+                            </cq:responsive>
+                        </button_9119920>
+                    </container_1562857610>
+                </container_263094449>
             </responsivegrid>
         </root>
     </jcr:content>
