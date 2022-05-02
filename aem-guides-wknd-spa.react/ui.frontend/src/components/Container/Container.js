@@ -13,13 +13,14 @@
  ~ See the License for the specific language governing permissions and
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
+ 
 import {
     MapTo,
     withComponentMappingContext,
     AllowedComponentsContainer
 } from '@adobe/aem-react-editable-components';
 
+require('./Container.css');
 
 const ContainerConfig = {
     emptyLabel: 'Container',
@@ -29,6 +30,4 @@ const ContainerConfig = {
     }
 };
 
-
 MapTo('wknd-spa-react/components/container')(withComponentMappingContext(AllowedComponentsContainer), ContainerConfig);
-

@@ -11,7 +11,7 @@ class Button extends Component {
     return <a
               id={ this.props.id }
               href={ this.props.link }
-              className={ `btn ${this.props.styleVariation}` }
+              className={ `btn ${this.props.styleVariation} ${this.props.marginBottom} ${this.props.marginEnd} ${this.props.marginStart} ${this.props.marginTop}` }
               title={ this.props.accessibilityLabel }>
                 { this.props.text }
             </a>;
