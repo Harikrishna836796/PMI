@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/pmi-spa-poc",
+        "create path (nt:unstructured) /content/dam/pmi-spa-poc/jcr:content",
+        "set properties on /content/dam/pmi-spa-poc/jcr:content\n  set cq:conf{String} to /conf/pmi-spa-poc\n  set jcr:title{String} to \"pmi-spa-poc\"\nend"
+    ]
+}

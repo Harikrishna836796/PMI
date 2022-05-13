@@ -1,0 +1,5 @@
+{
+  "resource.resolver.mapping": [
+    "/content/pmi-spa-poc/</", "/:/"
+  ]
+}

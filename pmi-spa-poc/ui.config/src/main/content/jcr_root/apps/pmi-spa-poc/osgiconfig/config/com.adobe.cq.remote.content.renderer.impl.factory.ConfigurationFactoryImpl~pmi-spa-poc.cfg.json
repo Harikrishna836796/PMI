@@ -1,0 +1,9 @@
+{
+    "getContentPathPattern": "/content/pmi-spa-poc/(.*)|/conf/pmi-spa-poc/(.*)/settings/wcm/templates/(.*)",
+    "getRemoteHTMLRendererUrl" : "http://localhost:3233/api/v1/web/guest/pmi-spa-poc-0.1.0/ssr",
+    "getRequestTimeout": 10000,
+    "getAdditionalRequestHeaders": [
+
+    ],
+    "getCompression": "none"
+}
