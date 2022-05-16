@@ -34,9 +34,9 @@
                     jcr:title="Content Image"
                     sling:resourceType="wcm/core/components/policy/policy"
                     allowedRenditionWidths="[320,480,600,800,1024,1200,1600]"
-                    disableLazyLoading="false"
                     allowUpload="false"
                     altValueFromDAM="true"
+                    disableLazyLoading="false"
                     displayPopupTitle="true"
                     isDecorative="false"
                     jpegQuality="{Long}85"
@@ -303,6 +303,18 @@
                         </assetToComponentMapping>
                     </cq:authoring>
                 </policy_1575040440977>
+                <policy_2618503654100
+                    jcr:lastModified="{Date}2022-05-13T22:23:31.206+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Container Policies"
+                    sling:resourceType="wcm/core/components/policy/policy"
+                    backgroundColorEnabled="true"
+                    backgroundImageEnabled="true"
+                    components="group:pmi-spa-poc - Content"
+                    layoutDisabled="false">
+                    <jcr:content jcr:primaryType="nt:unstructured"/>
+                </policy_2618503654100>
             </container>
             <teaser jcr:primaryType="nt:unstructured">
                 <policy_1575031387650
@@ -353,25 +365,9 @@
                     sling:resourceType="wcm/core/components/policy/policy"
                     clientlibs="[pmi-spa-poc.react]"
                     isRoot="{Boolean}true"
-                    structureDepth="3"
-                />
+                    structureDepth="3"/>
             </spa>
         </components>
     </pmi-spa-poc>
-    <wcm jcr:primaryType="nt:unstructured">
-        <foundation jcr:primaryType="nt:unstructured">
-            <components jcr:primaryType="nt:unstructured">
-                <responsivegrid jcr:primaryType="nt:unstructured">
-                    <spa-default
-                        jcr:description="Includes only SPA-Enabled components."
-                        jcr:primaryType="nt:unstructured"
-                        jcr:title="SPA Content"
-                        sling:resourceType="wcm/core/components/policy/policy"
-                        components="[/libs/wcm/foundation/components/responsivegrid,/apps/pmi-spa-poc/components/text]">
-                        <jcr:content jcr:primaryType="nt:unstructured"/>
-                    </spa-default>
-                    </responsivegrid>
-            </components>
-        </foundation>
-    </wcm>
+    <wcm/>
 </jcr:root>
