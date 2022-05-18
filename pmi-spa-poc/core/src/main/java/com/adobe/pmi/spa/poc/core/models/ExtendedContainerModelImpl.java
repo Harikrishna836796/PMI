@@ -24,88 +24,124 @@ import com.day.cq.wcm.foundation.model.responsivegrid.ResponsiveGrid;
 
 import java.util.Map;
 
+import javax.annotation.PostConstruct;
+
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Exporter;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.Via;
 import org.apache.sling.models.annotations.injectorspecific.Self;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import org.apache.sling.models.annotations.via.ResourceSuperType;
 
-@Model(adaptables = SlingHttpServletRequest.class, adapters = {LayoutContainer.class, ComponentExporter.class }, resourceType = ExtendedContainerModelImpl.RESOURCE_TYPE)
+@Model(adaptables = SlingHttpServletRequest.class, adapters = { LayoutContainer.class,
+		ComponentExporter.class }, resourceType = ExtendedContainerModelImpl.RESOURCE_TYPE)
 @Exporter(name = ExporterConstants.SLING_MODEL_EXPORTER_NAME, extensions = ExporterConstants.SLING_MODEL_EXTENSION)
-public class ExtendedContainerModelImpl implements LayoutContainer
-{
-    protected static final String RESOURCE_TYPE = "pmi-spa-poc/components/container";
-    
-    @Self @Via(type = ResourceSuperType.class)
-    private LayoutContainer layoutContainer;
+public class ExtendedContainerModelImpl implements LayoutContainer {
+	protected static final String RESOURCE_TYPE = "pmi-spa-poc/components/container";
 
-    @Self @Via(type = ResourceSuperType.class)
-    ResponsiveGrid responsiveGrid;
+	@Self
+	@Via(type = ResourceSuperType.class)
+	private LayoutContainer layoutContainer;
 
-     @Self
-    private SlingHttpServletRequest request;
+	@Self
+	@Via(type = ResourceSuperType.class)
+	ResponsiveGrid responsiveGrid;
 
-    @Override
-    public String getBackgroundStyle() {
-        return layoutContainer.getBackgroundStyle();
-    }
+	@Self
+	private SlingHttpServletRequest request;
 
-    @Override
-    public String getAppliedCssClasses() {
-        return layoutContainer.getAppliedCssClasses();
-    }
+	private Map<String, String> columnClasses;
 
-    @Override
-    public Map<String, ? extends ComponentExporter> getExportedItems() {
-        return layoutContainer.getExportedItems();
-    }
+	@ValueMapValue
+	@Via("resource")
+	@Default(values = "padding-left-sm")
+	private String paddingLeft;
 
-    @Override
-    public String[] getExportedItemsOrder() {
-        return layoutContainer.getExportedItemsOrder();
-    }
+	@ValueMapValue
+	@Via("resource")
+	@Default(values = "padding-right-sm")
+	private String paddingRight;
 
-    @Override
-    public LayoutType getLayout() {
-        return layoutContainer.getLayout();
-    }
+	public String getPaddingLeft() {
+		return paddingLeft;
+	}
 
-    public int getColumnCount() {
-        return responsiveGrid.getColumnCount();
-    }
+	public String getPaddingRight() {
+		return paddingRight;
+	}
 
-    public AllowedComponentsExporter getAllowedComponents() {
-        return responsiveGrid.getExportedAllowedComponents();
-    }
+	@PostConstruct
+	protected void init() {
+		columnClasses = responsiveGrid.getColumnClassNames();
+	}
 
-    public String getGridClassNames() {
-        return responsiveGrid.getGridClassNames();
-    }
+	public Map<String, String> getColumnClassNames() {
+		return columnClasses;
+	}
 
-    public Map<String, String> getColumnClassNames() {
-        return responsiveGrid.getColumnClassNames();
-    }
+	@Override
+	public String getBackgroundStyle() {
+		return layoutContainer.getBackgroundStyle();
+	}
 
-    @Override
-    public String getAccessibilityLabel() {
-        return layoutContainer.getAccessibilityLabel();
-    }
+	@Override
+	public String getAppliedCssClasses() {
+		return layoutContainer.getAppliedCssClasses();
+	}
 
-    @Override
-    public String getRoleAttribute() {
-        return layoutContainer.getRoleAttribute();
-    }
+	@Override
+	public Map<String, ? extends ComponentExporter> getExportedItems() {
+		return layoutContainer.getExportedItems();
+	}
 
-    @Override
-    public String getExportedType() {
-        return RESOURCE_TYPE;
-    }
+	@Override
+	public String[] getExportedItemsOrder() {
+		return layoutContainer.getExportedItemsOrder();
+	}
 
-    public String getRandom() {
-        return "THISISRANDOM";
-    }
+	@Override
+	public LayoutType getLayout() {
+		return layoutContainer.getLayout();
+	}
+
+	public int getColumnCount() {
+		return responsiveGrid.getColumnCount();
+	}
+
+	public AllowedComponentsExporter getAllowedComponents() {
+		return responsiveGrid.getExportedAllowedComponents();
+	}
+
+	public String getGridClassNames() {
+		return responsiveGrid.getGridClassNames();
+	}
+
+	/*
+	 * public Map<String, String> getColumnClassNames() { return
+	 * responsiveGrid.getColumnClassNames(); }
+	 */
+
+	@Override
+	public String getAccessibilityLabel() {
+		return layoutContainer.getAccessibilityLabel();
+	}
+
+	@Override
+	public String getRoleAttribute() {
+		return layoutContainer.getRoleAttribute();
+	}
+
+	@Override
+	public String getExportedType() {
+		return RESOURCE_TYPE;
+	}
+
+	public String getRandom() {
+		return "THISISPOC1";
+	}
 
 }
