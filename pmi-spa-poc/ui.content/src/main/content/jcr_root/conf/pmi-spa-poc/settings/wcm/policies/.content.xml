@@ -164,7 +164,7 @@
                     </rtePlugins>
                 </policy_641562756958017>
                 <policy_277139082783200
-                    jcr:lastModified="{Date}2022-05-19T18:33:00.650+05:30"
+                    jcr:lastModified="{Date}2022-05-19T19:30:07.103+05:30"
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Text Policies"
@@ -278,6 +278,9 @@
                         <subsuperscript
                             jcr:primaryType="nt:unstructured"
                             features="*"/>
+                        <eaem-aem-fonts
+                            jcr:primaryType="nt:unstructured"
+                            features="textColor,applyFont,textBackgroundColor"/>
                     </rtePlugins>
                 </policy_277139082783200>
             </text>
