@@ -58,12 +58,12 @@ public class ExtendedContainerModelImpl implements LayoutContainer {
 
 	@ValueMapValue
 	@Via("resource")
-	@Default(values = "padding-left-sm")
+	@Default(values = "none")
 	private String paddingLeft;
 
 	@ValueMapValue
 	@Via("resource")
-	@Default(values = "padding-right-sm")
+	@Default(values = "none")
 	private String paddingRight;
 
 	public String getPaddingLeft() {
