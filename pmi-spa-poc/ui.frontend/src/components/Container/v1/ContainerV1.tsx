@@ -53,7 +53,6 @@ class ContainerV1Impl extends AllowedComponentsContainer<ContainerV1Properties, 
     }
 
     componentDidMount() {
-        console.log('DID', this.props);
         if (this.mainDiv.current) {
             this.mainDiv.current.setAttribute('style', this.props.backgroundStyle);
         }

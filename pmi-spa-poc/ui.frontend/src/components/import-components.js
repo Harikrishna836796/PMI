@@ -34,7 +34,7 @@ import {
 } from '@adobe/aem-core-components-react-spa';
 
 import ContainerV1 from './Container/v1/ContainerV1';
-import ContainerV1IsEmptyFn from './Container/v1/ContainerV1IsEmptyFn';
+import { ContainerV1IsEmptyFn } from './Container/v1/ContainerV1IsEmptyFn';
 
 import {
     BreadCrumbV2,BreadCrumbV2IsEmptyFn,
