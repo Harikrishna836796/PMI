@@ -14,9 +14,6 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-import sanitizeHtml from 'sanitize-html';
-import sanitizeWhiteList from '../sanitize-html.whitelist';
-
 import React, { Component } from 'react';
 import extractModelId from '../../utils/extract-model-id';
 
@@ -32,7 +29,7 @@ class Text extends Component {
         id={extractModelId(this.props.cqPath)}
         data-rte-editelement
         dangerouslySetInnerHTML={{
-          __html: sanitizeHtml(this.props.text, sanitizeWhiteList)
+          __html: this.props.text
         }}
       />
     );

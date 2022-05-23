@@ -7,7 +7,6 @@ require('./Button.css');
  */
 class Button extends Component {
   render() {
-    console.log('BTN PROPS', this.props);
     return <a
               id={ this.props.id }
               href={ this.props.link }

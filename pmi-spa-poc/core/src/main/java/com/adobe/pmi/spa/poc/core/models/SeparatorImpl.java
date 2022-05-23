@@ -45,7 +45,7 @@ public class SeparatorImpl implements Component {
 
 	@ValueMapValue
 	@Via("resource")
-	@Default(values = "0")
+	@Default(values = "80")
 	private String size;
 
 	@Override

@@ -16,7 +16,6 @@
 import withAsyncImport from "../utils/withAsyncImport";
 
 import './Page/Page';
-import './Container/Container';
 import './ExperienceFragment/ExperienceFragment';
 
 import {MapTo} from '@adobe/aem-react-editable-components';
@@ -30,25 +29,28 @@ import {
 } from '@adobe/aem-core-components-react-base/dist/isEmptyFunctions';
 
 import {
-    ContainerV1, ContainerV1IsEmptyFn,
     TabsV1, TabsV1IsEmptyFn,
     AccordionV1,AccordionV1IsEmptyFn,
 } from '@adobe/aem-core-components-react-spa';
 
+import ContainerV1 from './Container/v1/ContainerV1';
+import ContainerV1IsEmptyFn from './Container/v1/ContainerV1IsEmptyFn';
+
 import {
     BreadCrumbV2,BreadCrumbV2IsEmptyFn,
-    ButtonV1,ButtonV1IsEmptyFn,
     ImageV2,ImageV2IsEmptyFn,
     LanguageNavigationV1,
     NavigationV1,
     TeaserV1,TeaserV1IsEmptyFn,
     DownloadV1,DownloadV1IsEmptyFn,
-    SeparatorV1,SeparatorV1IsEmptyFn,
     ListV2,ListV2IsEmptyFn
 } from '@adobe/aem-core-components-react-base';
 
 //lazyload / code splitting example of an internal component
 const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
+const LazyButtonComponent = withAsyncImport(() => import(`./Button/Button`));
+const LazySeparatorComponent = withAsyncImport(() => import(`./Separator/Separator`));
+
 
 //lazyload / code splitting examples of external components
 const TitleV2 = withAsyncImport(() => import(`@adobe/aem-core-components-react-base/dist/authoring/title/v2/TitleV2`));
@@ -57,24 +59,16 @@ const CarouselV1 = withAsyncImport(() => import(`@adobe/aem-core-components-reac
 
 MapTo('pmi-spa-poc/components/download')(DownloadV1, {isEmpty: DownloadV1IsEmptyFn});
 MapTo('pmi-spa-poc/components/list')(ListV2, {isEmpty: ListV2IsEmptyFn});
-MapTo('pmi-spa-poc/components/separator')(SeparatorV1, {isEmpty: SeparatorV1IsEmptyFn});
-
-MapTo('pmi-spa-poc/components/button')(ButtonV1, {isEmpty: ButtonV1IsEmptyFn});
 MapTo('pmi-spa-poc/components/teaser')(TeaserV1, {isEmpty: TeaserV1IsEmptyFn});
 MapTo('pmi-spa-poc/components/image')(ImageV2, {isEmpty: ImageV2IsEmptyFn});
 MapTo('pmi-spa-poc/components/title')(TitleV2, {isEmpty: TitleV2IsEmptyFn});
-
-
 MapTo('pmi-spa-poc/components/breadcrumb')(BreadCrumbV2, {isEmpty: BreadCrumbV2IsEmptyFn});
 MapTo('pmi-spa-poc/components/navigation')(NavigationV1);
 MapTo('pmi-spa-poc/components/languagenavigation')(LanguageNavigationV1);
-
-
 MapTo('pmi-spa-poc/components/tabs')(TabsV1, {isEmpty: TabsV1IsEmptyFn});
 MapTo('pmi-spa-poc/components/accordion')(AccordionV1, {isEmpty: AccordionV1IsEmptyFn});
 MapTo('pmi-spa-poc/components/carousel')(CarouselV1, {isEmpty: CarouselV1IsEmptyFn});
 MapTo('pmi-spa-poc/components/container')(ContainerV1, {isEmpty: ContainerV1IsEmptyFn});
-
 
 //lazy load of internal component (hello world)
 
@@ -92,3 +86,5 @@ const TextEditConfig = {
 };
 
 MapTo('pmi-spa-poc/components/text')(LazyTextComponent, TextEditConfig);
+MapTo('pmi-spa-poc/components/button')(LazyButtonComponent);
+MapTo('pmi-spa-poc/components/separator')(LazySeparatorComponent);
