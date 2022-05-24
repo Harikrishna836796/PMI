@@ -444,6 +444,21 @@
                                     cq:styleId="1652965414387"
                                     cq:styleLabel="Border"
                                     jcr:primaryType="nt:unstructured"/>
+								<item1
+                                    cq:styleClasses="inline-left"
+                                    cq:styleId="1652965414388"
+                                    cq:styleLabel="Inline Left"
+                                    jcr:primaryType="nt:unstructured"/>
+								<item2
+                                    cq:styleClasses="inline-center"
+                                    cq:styleId="1652965414389"
+                                    cq:styleLabel="Inline Center"
+                                    jcr:primaryType="nt:unstructured"/>
+								<item3
+                                    cq:styleClasses="inline-right"
+                                    cq:styleId="1652965414386"
+                                    cq:styleLabel="Inline Right"
+                                    jcr:primaryType="nt:unstructured"/>
                             </cq:styles>
                         </item0>
                     </cq:styleGroups>
