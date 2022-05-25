@@ -36,6 +36,9 @@ import {
 import ContainerV1 from './Container/v1/ContainerV1';
 import { ContainerV1IsEmptyFn } from './Container/v1/ContainerV1IsEmptyFn';
 
+import ContainerV2 from './Container/v2/ContainerV2';
+import { ContainerV2IsEmptyFn } from './Container/v2/ContainerV2IsEmptyFn';
+
 import {
     BreadCrumbV2,BreadCrumbV2IsEmptyFn,
     ImageV2,ImageV2IsEmptyFn,
@@ -69,6 +72,7 @@ MapTo('pmi-spa-poc/components/tabs')(TabsV1, {isEmpty: TabsV1IsEmptyFn});
 MapTo('pmi-spa-poc/components/accordion')(AccordionV1, {isEmpty: AccordionV1IsEmptyFn});
 MapTo('pmi-spa-poc/components/carousel')(CarouselV1, {isEmpty: CarouselV1IsEmptyFn});
 MapTo('pmi-spa-poc/components/container')(ContainerV1, {isEmpty: ContainerV1IsEmptyFn});
+MapTo('pmi-spa-poc/components/flex-container')(ContainerV2, {isEmpty: ContainerV2IsEmptyFn});
 
 //lazy load of internal component (hello world)
 
