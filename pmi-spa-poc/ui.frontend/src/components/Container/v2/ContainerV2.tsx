@@ -34,8 +34,8 @@ export interface ContainerV2Properties extends CoreContainerProperties, Responsi
     id: string;
     layout?: 'responsiveGrid' | 'simple';
     children: any;
-    paddingLeft: string;
-    paddingRight: string;
+   // paddingLeft: string;
+  //  paddingRight: string;
 }
 
 class ContainerV2Impl extends AllowedComponentsContainer<ContainerV2Properties, CoreContainerState> {
@@ -53,7 +53,6 @@ class ContainerV2Impl extends AllowedComponentsContainer<ContainerV2Properties, 
     }
 
     componentDidMount() {
-        console.log('FLEX', this);
         if (this.mainDiv.current) {
             this.mainDiv.current.setAttribute('style', this.props.backgroundStyle);
         }
@@ -89,23 +88,43 @@ class ContainerV2Impl extends AllowedComponentsContainer<ContainerV2Properties, 
             return super.render();
         }
 
+        const gridProps: ResponsiveGridProperties = {
+            allowedComponents: {applicable: false, components: []},
+            componentMapping: this.state.componentMapping,
+            gridClassNames: this.props.gridClassNames,
+            columnClassNames: this.props.columnClassNames,
+            cqItems: this.props.cqItems,
+            cqItemsOrder: this.props.cqItemsOrder,
+            title: "",
+            cqPath: this.props.cqPath,
+            isInEditor: false
+        };
+
         return (
-            <div ref={this.mainDiv}
-                    id={this.props.id}
-                    className={ `${this.props.baseCssClass} test1` }>
+            <div {...this.coreContainerProps}>
+                <div ref={this.mainDiv}
+                     id={this.props.id}
+                     className={ `${this.props.baseCssClass} ` }>
 
-                <Container
-                    componentMapping={this.state.componentMapping}
-                    cqForceReload={this.props.cqForceReload}
-                    cqPath={this.props.cqPath}
-                    cqItems={this.props.cqItems}
-                    cqItemsOrder={this.props.cqItemsOrder}
-                    isInEditor={false}/>
+                    {(this.props.layout && this.props.layout === 'simple') &&
+                    <Container
+                        componentMapping={this.state.componentMapping}
+                        cqForceReload={this.props.cqForceReload}
+                        cqPath={this.props.cqPath}
+                        cqItems={this.props.cqItems}
+                        cqItemsOrder={this.props.cqItemsOrder}
+                        isInEditor={false}/>}
 
+                    {(!this.props.layout || this.props.layout !== 'simple') &&
+                    <ResponsiveGrid {...gridProps}/>
+
+                    }
+                    {this.placeholderComponent}
+                </div>
             </div>
         )
     }
 
 }
 
-export default withStandardBaseCssClass(ContainerV2Impl, "flex-container");
+export default withStandardBaseCssClass(ContainerV2Impl, "cmp-container");
