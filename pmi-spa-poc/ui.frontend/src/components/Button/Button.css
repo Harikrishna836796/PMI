@@ -14,6 +14,7 @@
   background-color: #33303c;
   color: #fff;
 }
+
 .btn-slate-turquoise:hover {
   background-color: #5eced0;
   color: #33303c;
@@ -23,8 +24,31 @@
   background-color: #33303c;
   color: #fff;
 }
+
 .btn-slate-white:hover {
   background-color: #fff;
   color: #33303c;
   outline: 1px #33303c solid;
 }
+
+.btn.ms-1 { margin-left: 1px; }
+.btn.ms-2 { margin-left: 2px; }
+.btn.ms-3 { margin-left: 3px; }
+.btn.ms-4 { margin-left: 4px; }
+.btn.ms-5 { margin-left: 5px; }
+.btn.ms-6 { margin-left: 6px; }
+.btn.ms-7 { margin-left: 7px; }
+.btn.ms-8 { margin-left: 8px; }
+.btn.ms-9 { margin-left: 9px; }
+.btn.ms-10 { margin-left: 10px; }
+
+.btn.me-1 { margin-right: 1px; }
+.btn.me-2 { margin-right: 2px; }
+.btn.me-3 { margin-right: 3px; }
+.btn.me-4 { margin-right: 4px; }
+.btn.me-5 { margin-right: 5px; }
+.btn.me-6 { margin-right: 6px; }
+.btn.me-7 { margin-right: 7px; }
+.btn.me-8 { margin-right: 8px; }
+.btn.me-9 { margin-right: 9px; }
+.btn.me-10 { margin-right: 10px; }

@@ -34,8 +34,13 @@ export interface ContainerV2Properties extends CoreContainerProperties, Responsi
     id: string;
     layout?: 'responsiveGrid' | 'simple';
     children: any;
-   // paddingLeft: string;
-  //  paddingRight: string;
+    flexDirection: string;
+    flexGrow: string;
+    flexShrink: string;
+    justifyContent: string;
+    alignContent: string;
+    paddingLeft: string;
+    paddingRight: string;
 }
 
 class ContainerV2Impl extends AllowedComponentsContainer<ContainerV2Properties, CoreContainerState> {
@@ -52,17 +57,25 @@ class ContainerV2Impl extends AllowedComponentsContainer<ContainerV2Properties, 
         this.mainDiv = React.createRef();
     }
 
-    componentDidMount() {
+    init() {
         if (this.mainDiv.current) {
+            this.mainDiv.current.className = '';
             this.mainDiv.current.setAttribute('style', this.props.backgroundStyle);
+            this.mainDiv.current.classList.add("flex-container");
+            this.mainDiv.current.classList.add("flex-direction-" + this.props.flexDirection);
+            this.mainDiv.current.classList.add("flex-shrink-" + this.props.flexShrink);
+            this.mainDiv.current!.parentElement!.parentElement!.classList!.add("flex-grow-" + this.props.flexGrow);
+            this.mainDiv.current.classList!.add("justify-content-" + this.props.justifyContent);
+            this.mainDiv.current.classList!.add("align-content-" + this.props.alignContent);
         }
+    }
 
+    componentDidMount() {
+        this.init();
     }
 
     componentDidUpdate() {
-        if (this.mainDiv.current) {
-            this.mainDiv.current.setAttribute('style', this.props.backgroundStyle);
-        }
+        this.init();
     }
 
     get coreContainerProps() {
@@ -91,8 +104,8 @@ class ContainerV2Impl extends AllowedComponentsContainer<ContainerV2Properties, 
         const gridProps: ResponsiveGridProperties = {
             allowedComponents: {applicable: false, components: []},
             componentMapping: this.state.componentMapping,
-            gridClassNames: this.props.gridClassNames,
-            columnClassNames: this.props.columnClassNames,
+            gridClassNames: '',
+            columnClassNames: {},
             cqItems: this.props.cqItems,
             cqItemsOrder: this.props.cqItemsOrder,
             title: "",
@@ -104,7 +117,7 @@ class ContainerV2Impl extends AllowedComponentsContainer<ContainerV2Properties, 
             <div {...this.coreContainerProps}>
                 <div ref={this.mainDiv}
                      id={this.props.id}
-                     className={ `${this.props.baseCssClass} ` }>
+                     className={ `${this.props.baseCssClass} ${this.props.paddingLeft} ${this.props.paddingRight}` }>
 
                     {(this.props.layout && this.props.layout === 'simple') &&
                     <Container
@@ -117,8 +130,8 @@ class ContainerV2Impl extends AllowedComponentsContainer<ContainerV2Properties, 
 
                     {(!this.props.layout || this.props.layout !== 'simple') &&
                     <ResponsiveGrid {...gridProps}/>
-
                     }
+
                     {this.placeholderComponent}
                 </div>
             </div>
@@ -127,4 +140,4 @@ class ContainerV2Impl extends AllowedComponentsContainer<ContainerV2Properties, 
 
 }
 
-export default withStandardBaseCssClass(ContainerV2Impl, "cmp-container");
+export default withStandardBaseCssClass(ContainerV2Impl, "flex-container");

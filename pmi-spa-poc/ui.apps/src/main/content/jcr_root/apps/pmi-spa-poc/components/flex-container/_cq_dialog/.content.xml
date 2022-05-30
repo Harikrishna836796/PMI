@@ -45,7 +45,7 @@
                                                     <rowReverse
                                                             jcr:primaryType="nt:unstructured"
                                                             text="Row Reverse"
-                                                            value="rowReverse"/>
+                                                            value="row-reverse"/>
                                                     <column
                                                             jcr:primaryType="nt:unstructured"
                                                             text="Column"
@@ -53,7 +53,7 @@
                                                     <columnReverse
                                                             jcr:primaryType="nt:unstructured"
                                                             text="Column Reverse"
-                                                            value="columnReverse"/>
+                                                            value="column-reverse"/>
                                                 </items>
                                             </flexDirection>
                                             <flexWrap
@@ -173,7 +173,7 @@
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
                                                     fieldLabel="Flex Grow"
                                                     name="./flexGrow"
-                                                    min="{Long}-5"
+                                                    min="{Long}1"
                                                     max="{Long}5"
                                                     step="{Double}1"/>
                                             <flexShrink
@@ -181,7 +181,7 @@
                                                     sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
                                                     fieldLabel="Flex Shrink"
                                                     name="./flexShrink"
-                                                    min="{Long}0"
+                                                    min="{Long}1"
                                                     max="{Long}5"
                                                     step="{Double}1"/>
 											<paddingleft

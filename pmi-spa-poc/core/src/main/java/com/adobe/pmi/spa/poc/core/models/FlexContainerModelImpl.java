@@ -83,7 +83,7 @@ public class FlexContainerModelImpl implements LayoutContainer {
 	
 	@ValueMapValue
 	@Via("resource")
-	@Default(values = "none")
+	@Default(values = "1")
 	private String flexGrow;
 	
 	@ValueMapValue
