@@ -91,7 +91,23 @@ public class FlexContainerModelImpl implements LayoutContainer {
 	@Default(values = "none")
 	private String flexShrink;
 
-	
+	@ValueMapValue
+	@Via("resource")
+	@Default(values = "none")
+	private String paddingLeft;
+
+	@ValueMapValue
+	@Via("resource")
+	@Default(values = "none")
+	private String paddingRight;
+
+	public String getPaddingLeft() {
+		return paddingLeft;
+	}
+
+	public String getPaddingRight() {
+		return paddingRight;
+	}
 
 	public String getFlexDirection() {
 		return flexDirection;
