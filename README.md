@@ -1,3 +1,20 @@
+# Startup
+
+ 1. Start AEM authoring server
+ 2. After changing frontend code you need to do a new build:
+    ```
+    pmi-spa-poc\ui.frontend> npm run build
+    ```
+    or you can use dev server
+    ```
+    pmi-spa-poc\ui.frontend> npm run start
+    ```
+ 3. After build is finished you need to deploy it:
+    ```
+    pmi-spa-poc\ui.apps>mvn clean install -PautoInstallPackage
+    ```
+
+
 # POC-1 - Container for 12 column grid
 [URL to container javascript component](pmi-spa-poc/ui.frontend/src/components/Container/v1)
 
